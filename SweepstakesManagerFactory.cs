@@ -8,22 +8,23 @@ namespace sweepStakes
 {
     class SweepstakesManagerFactory
     {
-        //member variables
-
-        //constructor
-        public SweepstakesManagerFactory()
+        public ISweepstakesManager GenerateSweepstakesManager(string choice)
         {
+            switch (choice)
+            {
+                case "stack":
+                    SweepstakesStackManager sweepstakesStackManager = new SweepstakesStackManager();
+                    return sweepstakesStackManager;
 
+                case "queue":
+                    SweepstakesQueueManager sweepstakesQueueManager = new SweepstakesQueueManager();
+                    return sweepstakesQueueManager;
+
+                default:
+                    SweepstakesQueueManager sweepstakesQueueManager1 = new SweepstakesQueueManager();
+                    return sweepstakesQueueManager1;
+
+            }
         }
-
-        //member methods
-        public string ChooseWhichMethod()
-        {
-            string choice;
-            Console.WriteLine("would you like use the sweepstakes in the stack or queue?");
-            choice = Console.ReadLine().ToLower();
-            return choice;
-        }
-
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace sweepStakes
 {
-    class MarketingFirm
+    public class MarketingFirm
     {
         //member variables
         ISweepstakesManager manager;
@@ -17,22 +17,6 @@ namespace sweepStakes
         }
 
         //member methods
-        public ISweepstakesManager GenerateSweepstakesManager(string choice)
-        {
-            switch (choice)
-            {
-                case "stack":
-                    SweepstakesStackManager sweepstakesStackManager = new SweepstakesStackManager();
-                    return sweepstakesStackManager;
-                    
-                case "queue":
-                    SweepstakesQueueManager sweepstakesQueueManager = new SweepstakesQueueManager();
-                    return sweepstakesQueueManager;
-                default:
-                    SweepstakesQueueManager sweepstakesQueueManager1 = new SweepstakesQueueManager();
-                    return sweepstakesQueueManager1;
-                    
-            }
-        }
+       
     }
 }

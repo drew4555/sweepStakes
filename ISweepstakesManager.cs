@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace sweepStakes
 {
-    interface ISweepstakesManager
+    public interface ISweepstakesManager
     {
         //member variables
 

@@ -13,15 +13,15 @@ namespace sweepStakes
         //costructor
         public UserInterface()
         {
-            IntroToContestant();
+            IntroToUser();
         }
         //member methods
-        static void IntroToContestant()
+        void IntroToUser()
         {
             
             string register;
             Console.WriteLine("Welcome to the sweepstakes! Are you a participant or manager?");
-            Console.WriteLine("Please choose ","yes"," or ","no" );
+            Console.WriteLine("Please choose ","user"," or ","manager" );
             register = Console.ReadLine().ToLower();
             Console.ReadKey();
             switch (register)
@@ -31,9 +31,19 @@ namespace sweepStakes
                         break;
                     
                 case "manager":
-                    SweepstakesManagerFactory manager = new SweepstakesManagerFactory();
+                    ChooseWhichMethod();
                     break;
             }
+        }
+        public string ChooseWhichMethod()
+        {
+            string choice;
+            Console.WriteLine("would you like use the sweepstakes in the stack or queue?");
+            choice = Console.ReadLine().ToLower();
+            return choice;
+
+            
+            
         }
     }
 }
