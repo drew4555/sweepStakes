@@ -10,7 +10,8 @@ namespace sweepStakes
     {
         static void Main(string[] args)
         {
-            UserInterface ui = new UserInterface();
+           
+            
         }
     }
 }

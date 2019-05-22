@@ -23,13 +23,13 @@ namespace sweepStakes
         {
             participants.Add(contestant.registrationNumber, contestant);
         }
-        public Contestant PickWinner()
+        public string PickWinner()
         {
             Random rand = new Random();
             List<int> keylist = new List<int>(participants.Keys);
             int randomkey = keylist[rand.Next(keylist.Count)];
             winner = participants[randomkey];
-            return winner;   
+            return winner.firstName;   
         }
         public void PrintWinner(Contestant contestant)
         {
