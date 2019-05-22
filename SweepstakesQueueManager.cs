@@ -17,6 +17,5 @@ namespace sweepStakes
         }
 
         //member methods
-
     }
 }

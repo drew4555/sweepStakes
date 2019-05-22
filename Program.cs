@@ -6,17 +6,11 @@ using System.Threading.Tasks;
 
 namespace sweepStakes
 {
-    class SweepstakesQueueManager
+    class Program
     {
-        //member variables
-
-        //constructor
-        public SweepstakesQueueManager()
+        static void Main(string[] args)
         {
-
+            UserInterface ui = new UserInterface();
         }
-
-        //member methods
-
     }
 }
