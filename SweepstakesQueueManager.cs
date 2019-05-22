@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace sweepStakes
 {
-    class SweepstakesQueueManager
+    class SweepstakesQueueManager: ISweepstakesManager
     {
         //member variables
+        Queue<SweepStakes> sweepstakesqueue = new Queue<SweepStakes>();
+        SweepStakes currentSweepstake;
 
         //constructor
         public SweepstakesQueueManager()
@@ -17,5 +19,15 @@ namespace sweepStakes
         }
 
         //member methods
+        public SweepStakes GetSweepstakes()
+        {
+            currentSweepstake = sweepstakesqueue.Dequeue();
+            return currentSweepstake;
+        }
+
+        public void InsertSweepstakes(SweepStakes sweepstakes)
+        {
+            sweepstakesqueue.Enqueue(sweepstakes);
+        }
     }
 }

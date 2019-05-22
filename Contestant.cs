@@ -31,11 +31,11 @@ namespace sweepStakes
         {
             Contestant contestant = new Contestant();
             Console.WriteLine("Please enter your first name");
-            contestant.firstname = Console.ReadLine().ToString();
+            contestant.firstName = Console.ReadLine().ToString();
             Console.WriteLine("Please enter your last name");
-            contestant.lastname = Console.ReadLine().ToString();
+            contestant.lastName = Console.ReadLine().ToString();
             Console.WriteLine("please enter your email address");
-            contestant.email = Console.ReadLine().ToString();
+            contestant.emailAddress = Console.ReadLine().ToString();
             contestant.AssignRegistrationNumber();
         }
     }

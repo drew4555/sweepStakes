@@ -9,14 +9,13 @@ namespace sweepStakes
     public class SweepStakes
     {
         //member variables
-        public Contestant contestant;
         Dictionary<int, Contestant> participants = new Dictionary<int, Contestant>();
         Contestant winner;
-        
+        string name;
         //constructor
-        public SweepStakes()
+        public SweepStakes(string name)
         {
-
+            this.name = name;
         }
 
         //member methods
